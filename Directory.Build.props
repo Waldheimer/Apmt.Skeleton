@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>appointmenting</RootNamespace>
+    <Authors>WHM</Authors>
+    <Company>WHM</Company>
+    <Copyright>Copyright © WHM. Alle Rechte vorbehalten.</Copyright>
+    <Product>Appointmenting®</Product>
+    <ProductVersion>0.0.1</ProductVersion>
+    <Version>0.0.1-dev</Version>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+</Project>

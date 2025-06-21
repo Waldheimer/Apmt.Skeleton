@@ -1,0 +1,6 @@
+@appointmenting.GRAPHQL_HostAddress = http://localhost:5047
+
+GET {{appointmenting.GRAPHQL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
