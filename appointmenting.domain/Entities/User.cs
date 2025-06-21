@@ -1,5 +1,8 @@
-﻿namespace appointmenting.domain.Entities;
+﻿using appointmenting.DomainAbstractions;
 
-public class User
+namespace appointmenting.domain.Entities;
+
+public class User : EntityBase
 {
+
 }
