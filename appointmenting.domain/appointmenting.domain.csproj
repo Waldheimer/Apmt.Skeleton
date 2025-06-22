@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="JointEntities\" />
+    <Folder Include="Helper\" />
+    <Folder Include="ValueObjects\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WHM.shared\WHM.shared.csproj" />
+  </ItemGroup>
+
 </Project>
