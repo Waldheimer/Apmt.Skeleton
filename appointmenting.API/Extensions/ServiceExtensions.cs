@@ -2,6 +2,10 @@
 
 namespace appointmenting.API.Extensions;
 
+//  ------------------------------
+//  Extension Methods for retrieving the Current Logger Instance of a Scope by Type oder Name 
+//  Extension Method for retrieving the Current Configuration of a Scope
+//  ------------------------------
 public static class ServiceExtensions
 {
     public static ILogger<T> CurrentLogger<T>(this IServiceCollection services)

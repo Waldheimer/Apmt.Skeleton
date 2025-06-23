@@ -4,15 +4,16 @@ using appointmenting.API.Extensions;
 using Scalar.AspNetCore;
 using Serilog;
 using System.Text;
+using appointmenting.application;
+using appointmenting.data_access;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//var logger = builder.Services.CurrentLogger<Program>();
-
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+//  Add OpenApi Support
 builder.Services.AddOpenApi();
+//  --------------------
 
+//  --- Configure Serilog ---
 Console.OutputEncoding = Encoding.UTF8;
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
@@ -22,8 +23,14 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 var logger = builder.Services.CurrentLogger<Program>();
 logger.LogInformation("Starting Appointmenting API v1");
+//  --------------------
 
+//  Add Custom DIs
 builder.Services.AddApiServices();
+builder.Services.AddApplication();
+builder.Services.AddDataAccess();
+//  --------------------
+
 
 var app = builder.Build();
 
@@ -34,6 +41,7 @@ app.UseApiEndpoints();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    //  Use the new Scalar instead of Swagger
     app.MapScalarApiReference();
 }
 
