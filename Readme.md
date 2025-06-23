@@ -19,5 +19,5 @@
 
 - [x] Services
     - [x] appointmenting.API ( Asp.NetCore WebAPI )
-    - [x] appointmenting.GRAPHQL ( Asp.NetCore WebAPI )
-    - [x] appointmenting.GRPC ( Asp.NetCore gRPC-Service )
+    - [x] appointmenting.GRAPHQL ( Asp.NetCore WebAPI ) TODO
+    - [x] appointmenting.GRPC ( Asp.NetCore gRPC-Service ) TODO
